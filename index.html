@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css">
+  <title>Navbar (Page Scroll)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav class="nav" id="navbar">
+    <a class="logo" href="#home" aria-label="Logo">
+      <svg id="logoSvg" class="logo-svg" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg" aria-label="Logo">
+         <defs>
+           <linearGradient id="logoGrad" x1="0" y1="0" x2="0" y2="70" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#6D5BFF"/>
+              <stop offset="100%" stop-color="#4B3CF0"/>
+           </linearGradient>
+         </defs>
+       <path class="logo-bar" d="M0 45 L20 35 L20 70 L0 70 Z"/>
+       <path class="logo-bar" d="M28 30 L48 18 L48 70 L28 70 Z"/>
+       <path class="logo-bar" d="M56 0 L76 10 L76 70 L56 70 Z"/>
+       <path class="logo-bar" d="M84 18 L104 28 L104 70 L84 70 Z"/>
+       <path class="logo-bar" d="M112 31 L132 41 L132 70 L112 70 Z"/>
+     </svg>
+    </a>
+
+    <div class="nav-left" id="desktopLinks">
+      <button class="pill" type="button" id="ctaBtn">Оставить заявку</button>
+    </div>
+
+    <div class="nav-right">
+      <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <button class="login" type="button">Login</button>
+    </div>
+
+    <div class="mobile-btn">
+      <svg id="burgerBtn" class="burger" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-label="Open menu" role="button" tabindex="0">
+        <line x1="4" y1="6" x2="20" y2="6"></line>
+        <line x1="4" y1="12" x2="20" y2="12"></line>
+        <line x1="4" y1="18" x2="20" y2="18"></line>
+      </svg>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div id="mobileLinks"></div>
+
+    <button class="mobile-pill" type="button">New Launch</button>
+    <button class="mobile-login" type="button">Login</button>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero__container">
+        <!-- LEFT -->
+         <div class="hero__left">
+          <h1 class="hero__title">
+            <span class="hero__accent change-title" id="changingTitle">Фронтальные погрузчики</span><br>
+            — от лидера китайской<br>
+            спецтехники <span class="hero__brand">XCMG</span>
+          </h1>
+
+          <p class="hero__desc">
+            AderaGroup — Официальный дистрибьютор компании Лонкинг в Казахстане.
+          </p>
+
+          <ul class="hero__list">
+            <li class="hero__li">
+              <span class="hero__icon">✓</span>
+              Техника всегда в наличии
+            </li>
+            <li class="hero__li">
+              <span class="hero__icon">🛡️</span>
+              Собственный сервис-центр
+            </li>
+            <li class="hero__li">
+              <span class="hero__icon">⚙️</span>
+              Большой ассортимент запчастей
+            </li>
+          </ul>
+
+          <a class="hero__btn" href="#contact">Отправить запрос</a>
+        </div>
+
+         <!-- RIGHT -->
+          <div class="hero__right">
+            <div class="heroCards">
+              <article class="heroCard">
+                <img class="heroCard__img" src="./assets/img/hero1.webp" alt="">
+              </article>
+              <article class="heroCard heroCard--mid">
+                <img class="heroCard__img" src="./assets/img/hero2.jpg" alt="">
+              </article>
+              <article class="heroCard">
+                <img class="heroCard__img" src="./assets/img/hero3.jpg" alt="">
+              </article>
+            </div>
+          </div>
+      </div>
+    </section>
+  </main>
+  <section id="about" class="about">
+  <div class="about__wrap">
+    <h2 class="about__title">О компании AderaGroup</h2>
+    <p class="about__subtitle">
+      Официальный дистрибьютор спецтехники в Казахстане. Помогаем бизнесу подбирать технику под задачи,
+      поставляем и сопровождаем на всём цикле эксплуатации.
+    </p>
+
+    <div class="about__grid">
+      <img
+        class="about__img"
+        src="./assets/img/about.webp"
+        alt="Спецтехника AderaGroup"
+      />
+
+      <div class="about__content">
+        <h3 class="about__h3">Как мы работаем</h3>
+        <p class="about__text">
+          Мы ориентированы на B2B и корпоративных клиентов: подбираем оптимальную комплектацию,
+          согласуем условия и обеспечиваем поддержку после покупки.
+        </p>
+
+        <div class="about__list">
+          <div class="about__item">
+            <div class="about__iconBox">
+              <img src="./assets/icons/target.png" alt="">
+            </div>
+            <div>
+              <div class="about__itemTitle">Подбор под ваш проект</div>
+              <div class="about__itemText">
+                Подбираем технику под виды работ, условия площадки и бюджет.
+              </div>
+            </div>
+          </div>
+
+          <div class="about__item">
+            <div class="about__iconBox">
+              <img src="./assets/icons/truck.png" alt="">
+            </div>
+            <div>
+              <div class="about__itemTitle">Поставка и сопровождение</div>
+              <div class="about__itemText">
+                Организуем поставку, документы и консультации на каждом этапе.
+              </div>
+            </div>
+          </div>
+
+          <div class="about__item">
+            <div class="about__iconBox">
+              <img src="./assets/icons/support.png" alt="">
+            </div>
+            <div>
+              <div class="about__itemTitle">Поддержка после покупки</div>
+              <div class="about__itemText">
+                Помогаем с обслуживанием, запчастями и сервисными вопросами.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </section>
+
+
+  <section class="benefits" id="benefits">
+    <div class="benefits__wrap">
+      <div class="benefits__head">
+        <h2 class="benefits__title">Наши преимущества</h2>
+        <p class="benefits__subtitle">Почему клиенты выбирают AderaGroup</p>
+      </div>
+
+      <div class="benefits__grid">
+        <article class="benefitCard">
+          <div class="benefitCard__icon">🏗️</div>
+          <h3 class="benefitCard__title">Спецтехника всегда в наличии</h3>
+          <p class="benefitCard__text">
+            Собственные склады и парковки — техника хранится бережно и готова к отгрузке.
+          </p>
+        </article>
+
+        <article class="benefitCard">
+          <div class="benefitCard__icon">💳</div>
+          <h3 class="benefitCard__title">Гибкие условия приобретения</h3>
+          <p class="benefitCard__text">
+            Лизинг, рассрочка или кредит — подберём удобный вариант под ваш бюджет.
+          </p>
+        </article>
+
+        <article class="benefitCard">
+          <div class="benefitCard__icon">🧪</div>
+          <h3 class="benefitCard__title">Тест-драйв спецтехники</h3>
+          <p class="benefitCard__text">
+            Можно протестировать технику перед покупкой и оценить все детали вживую.
+          </p>
+        </article>
+
+        <article class="benefitCard">
+          <div class="benefitCard__icon">🛠️</div>
+          <h3 class="benefitCard__title">Собственный сервис-центр</h3>
+          <p class="benefitCard__text">
+            Ремонт и обслуживание — быстро, с гарантией и наличием запчастей.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <section class="bigShowcase" id="showcase">
+    <div class="bigShowcase__wrap">
+      
+      <div class="bigShowcase__head">
+        <h2 class="bigShowcase__title">
+          Большой выбор <span>спецтехники</span>
+        </h2>
+        <p class="bigShowcase__subtitle">
+          Спецтехника для самых разных задач — от погрузчиков до бетоннасосов и автокранов.
+        </p>
+      </div>
+      
+      <div class="bigShowcase__media">
+        <img
+        class="bigShowcase__img"
+        src="./assets/img/фон.avif"
+        alt="Спецтехника"
+        />
+      </div>
+      
+      <div class="bigShowcase__actions">
+        <a class="bigShowcase__btn" href="catalog.html">Перейти в каталог</a>
+        <a class="bigShowcase__link" href="#contact">Нужна консультация?</a>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="contact" id="contact">
+    <div class="contact__wrap">
+
+      <div class="contact__left">
+        <h2 class="contact__title">Свяжитесь с нами</h2>
+        <p class="contact__subtitle">
+          Есть вопрос или идея? Наша дружелюбная команда с удовольствием свяжется с вами и окажет поддержку.
+        </p>
+
+        <form class="contact__form" onsubmit="event.preventDefault();">
+          <div class="contact__row2">
+            <div class="field">
+              <label class="field__label">First name</label>
+              <input class="field__input" type="text" placeholder="Rasul">
+            </div>
+
+            <div class="field">
+              <label class="field__label">Last name</label>
+              <input class="field__input" type="text" placeholder="Askaruly">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label">Email id</label>
+            <input class="field__input" type="email" placeholder="rasul@company.com">
+          </div>
+
+          <div class="field">
+            <label class="field__label">Phone number</label>
+
+            <div class="phone">
+              <select class="phone__select">
+                <option>KZ</option>
+                <option>RU</option>
+              </select>
+              <input class="phone__input" type="tel" placeholder="+7 777 123 45 67">
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field__label">Message</label>
+            <textarea class="field__textarea" rows="4" placeholder="Напишите нам..."></textarea>
+          </div>
+
+          <label class="agree">
+            <input class="agree__check" type="checkbox">
+            <span class="agree__text">
+              You agree to our <a href="#" class="agree__link">terms</a> and <a href="#" class="agree__link">privacy policy</a>.
+            </span>
+          </label>
+
+          <button class="contact__btn" type="submit">Send message</button>
+        </form>
+      </div>
+
+      <aside class="contact__right" aria-label="Map">
+        <iframe 
+          class="contact__map"
+          src="https://yandex.ru/map-widget/v1/?ll=51.180018,43.687224&z=17&l=map&pt=51.180018,43.687224,pm2rdl"
+          frameborder="0"
+          allowfullscreen="true"
+        ></iframe>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__bgsvg" aria-hidden="true"></div>
+    
+    <div class="footer__grid">
+      <!-- COL 1 -->
+      <div class="footer__col">
+        <a href="#home" class="footer__brand" aria-label="Logo">
+          <svg class="footer__logo" viewBox="0 0 150 70"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+
+            <defs>
+              <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="0" y2="70"
+                gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#6D5BFF"/>
+                <stop offset="100%" stop-color="#4B3CF0"/>
+              </linearGradient>
+            </defs>
+
+             <path fill="url(#footerLogoGrad)" d="M0 45 L20 35 L20 70 L0 70 Z"/>
+             <path fill="url(#footerLogoGrad)" d="M28 30 L48 18 L48 70 L28 70 Z"/>
+             <path fill="url(#footerLogoGrad)" d="M56 0 L76 10 L76 70 L56 70 Z"/>
+             <path fill="url(#footerLogoGrad)" d="M84 18 L104 28 L104 70 L84 70 Z"/>
+             <path fill="url(#footerLogoGrad)" d="M112 31 L132 41 L132 70 L112 70 Z"/>
+          </svg>
+          <span class="footer__brandText">AderaGroup</span>
+        </a>
+        <p class="footer__desc">
+          Официальный дистрибьютор спецтехники в Казахстане. Каталог, сервис и запчасти.
+        </p>
+      </div>
+
+      <!-- COL 2 -->
+       <div class="footer__col footer__colCenter">
+        <h2 class="footer__title">Company</h2>
+        <div class="footer__links">
+          <a href="#about">About us</a>
+          <a href="#about">Catalog</a>
+          <a href="#about">Contact</a>
+        </div>
+       </div>
+
+       <!-- COL 3 -->
+        <div class="footer__col">
+          <h2 class="footer__title">Subscribe to our newsletter</h2>
+          <p class="footer__text">Новости и обновления — 1 раз в неделю.</p>
+
+          <form class="footer__subscribe" onsubmit="event.preventDefault();">
+            <input class="footer__input" type="email" placeholder="Enter your email" required>
+            <button class="footer__btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>Copyright 2026 © AderaGroup. All Right Reserved.</p>
+      <div class="footer__bottomLinks">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="catalog.css">
+  <title>Каталог</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- ✅ NAVBAR (тот же, что на index) -->
+  <nav class="nav" id="navbar">
+    <a class="logo" href="index.html#home" aria-label="Logo">
+      <svg id="logoSvg" class="logo-svg" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg" aria-label="Logo">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="0" y2="70" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#6D5BFF"/>
+            <stop offset="100%" stop-color="#4B3CF0"/>
+          </linearGradient>
+        </defs>
+        <path class="logo-bar" d="M0 45 L20 35 L20 70 L0 70 Z"/>
+        <path class="logo-bar" d="M28 30 L48 18 L48 70 L28 70 Z"/>
+        <path class="logo-bar" d="M56 0 L76 10 L76 70 L56 70 Z"/>
+        <path class="logo-bar" d="M84 18 L104 28 L104 70 L84 70 Z"/>
+        <path class="logo-bar" d="M112 31 L132 41 L132 70 L112 70 Z"/>
+      </svg>
+    </a>
+
+    <!-- ✅ На catalog.html ссылки обычные (не one-page) -->
+    <div class="nav-left" id="desktopLinks">
+      <button class="pill" type="button" id="ctaBtn">Оставить заявку</button>
+    </div>
+
+    <div class="nav-right">
+      <svg class="icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <button class="login" type="button">Login</button>
+    </div>
+
+    <div class="mobile-btn">
+      <svg id="burgerBtn" class="burger" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-label="Open menu" role="button" tabindex="0">
+        <line x1="4" y1="6" x2="20" y2="6"></line>
+        <line x1="4" y1="12" x2="20" y2="12"></line>
+        <line x1="4" y1="18" x2="20" y2="18"></line>
+      </svg>
+    </div>
+  </nav>
+
+  <!-- ✅ MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <button class="close-btn" id="closeBtn" aria-label="Close menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    <div id="mobileLinks">
+      <a href="index.html#home">Главная</a>
+      <a href="index.html#about">О Нас</a>
+      <a href="catalog.html">Каталог</a>
+      <a href="index.html#contact">Контакт</a>
+    </div>
+
+    <button class="mobile-pill" type="button">New Launch</button>
+    <button class="mobile-login" type="button">Login</button>
+  </div>
+
+  <!-- ✅ CONTENT -->
+  <main class="cat">
+    <div class="cat__wrap">
+        <h1 class="cat__title" id="pageTitle">Каталог</h1>
+
+        <div class="catTabs" id="tabs" hidden></div>
+
+        <div class="catGrid" id="grid"></div>
+    </div>
+  </main>
+
+  <!-- ✅ FOOTER -->
+  <footer class="footer">
+    <div class="footer__bgsvg" aria-hidden="true"></div>
+
+    <div class="footer__grid">
+      <div class="footer__col">
+        <a href="index.html#home" class="footer__brand" aria-label="Logo">
+          <svg class="footer__logo" viewBox="0 0 150 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="0" y2="70" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#6D5BFF"/>
+                <stop offset="100%" stop-color="#4B3CF0"/>
+              </linearGradient>
+            </defs>
+            <path fill="url(#footerLogoGrad)" d="M0 45 L20 35 L20 70 L0 70 Z"/>
+            <path fill="url(#footerLogoGrad)" d="M28 30 L48 18 L48 70 L28 70 Z"/>
+            <path fill="url(#footerLogoGrad)" d="M56 0 L76 10 L76 70 L56 70 Z"/>
+            <path fill="url(#footerLogoGrad)" d="M84 18 L104 28 L104 70 L84 70 Z"/>
+            <path fill="url(#footerLogoGrad)" d="M112 31 L132 41 L132 70 L112 70 Z"/>
+          </svg>
+          <span class="footer__brandText">AderaGroup</span>
+        </a>
+        <p class="footer__desc">
+          Официальный дистрибьютор спецтехники в Казахстане. Каталог, сервис и запчасти.
+        </p>
+      </div>
+
+      <div class="footer__col footer__colCenter">
+        <h2 class="footer__title">Company</h2>
+        <div class="footer__links">
+          <a href="index.html#about">About us</a>
+          <a href="catalog.html">Catalog</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h2 class="footer__title">Subscribe to our newsletter</h2>
+        <p class="footer__text">Новости и обновления — 1 раз в неделю.</p>
+
+        <form class="footer__subscribe" onsubmit="event.preventDefault();">
+          <input class="footer__input" type="email" placeholder="Enter your email" required>
+          <button class="footer__btn" type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>Copyright 2026 © AderaGroup. All Right Reserved.</p>
+      <div class="footer__bottomLinks">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script>
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.getElementById('closeBtn');
+
+    function setMenuOpen(open){
+      mobileMenu.classList.toggle('open', open);
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+    }
+
+    burgerBtn.addEventListener('click', () => setMenuOpen(!mobileMenu.classList.contains('open')));
+    burgerBtn.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        setMenuOpen(!mobileMenu.classList.contains('open'));
+      }
+    });
+    closeBtn.addEventListener('click', () => setMenuOpen(false));
+    document.addEventListener('keydown', (e) => { if(e.key === 'Escape') setMenuOpen(false); });
+
+    // закрыть меню при клике по ссылке
+    document.getElementById('mobileLinks').addEventListener('click', (e) => {
+      if (e.target.closest('a')) setMenuOpen(false);
+    });
+  </script>
+  <script src="catalog.js"></script>
+  <script src="navbar.js"></script>
+</body>
+</html>

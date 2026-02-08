@@ -1,0 +1,162 @@
+/* фон страницы каталога как у sinotm */
+.cat{
+  background:#eef5fb;
+  min-height:calc(100vh - 1px);
+  padding: 120px 0 60px; /* под fixed navbar */
+}
+
+.cat__wrap{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.cat__title{
+  margin: 0 0 26px;
+  font-size: 44px;
+  line-height: 1.05;
+  font-weight: 800;
+  color:#111;
+}
+
+/* сетка карточек */
+.catGrid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (min-width: 768px){
+  .catGrid{ grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; }
+}
+@media (min-width: 1100px){
+  .catGrid{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 30px; }
+}
+
+/* карточка категории / подкатегории */
+.catCard{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+
+  background:#fff;
+  border-radius: 4px;
+  border: 1px solid #e6eef7;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+
+  padding: 18px 16px 22px;
+  min-height: 300px;
+  text-decoration:none;
+  color:#111;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.catCard:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.catCard__imgWrap{
+  width: 100%;
+  flex: 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.catCard__img{
+  max-width: 92%;
+  max-height: 220px;
+  object-fit: contain;
+  display:block;
+}
+
+.catCard__title{
+  margin-top: 14px;
+  font-weight: 700;
+  text-align:center;
+  font-size: 16px;
+}
+
+/* карточка товара */
+.prodCard{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+
+  background:#fff;
+  border-radius: 4px;
+  border: 1px solid #e6eef7;
+  box-shadow: 0 1px 0 rgba(0,0,0,.03);
+
+  padding: 18px 16px 18px;
+  min-height: 320px;
+  text-decoration:none;
+  color:#111;
+}
+
+.prodCard__imgWrap{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 6px 0 10px;
+}
+
+.prodCard__img{
+  max-width: 92%;
+  max-height: 220px;
+  object-fit: contain;
+  display:block;
+}
+
+.prodCard__title{
+  margin-top: 10px;
+  font-weight: 800;
+  text-align:center;
+  font-size: 15px;
+}
+
+.prodCard__bullets{
+  margin: 10px 0 0;
+  padding: 0 0 0 18px;
+  color:#2b2b2b;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* tabs как на бетононасосах (подчёркивание) */
+.catTabs{
+  display:flex;
+  justify-content:space-between;
+  gap: 16px;
+  border-bottom: 1px solid #d9e7f6;
+  margin: 8px 0 24px;
+}
+
+.catTab{
+  flex: 1;
+  padding: 14px 10px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6b7280;
+  position: relative;
+}
+
+.catTab.is-active{
+  color:#111;
+}
+
+.catTab.is-active::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;
+  height:2px;
+  background:#2563eb; /* синий как на скрине */
+}
